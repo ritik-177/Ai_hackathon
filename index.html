@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LLM Client Onboarding Agent</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <span class="app-header__title">
+            LLM Client Onboarding Agent
+        </span>
+
+      
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="app-container">
+
+        <!-- Input Card -->
+        <section class="panel">
+
+            <h2 class="panel__title">
+                Onboarding Request
+            </h2>
+
+            <p class="panel__helper">
+                Describe the clients and accounts you want to create.
+            </p>
+
+            <textarea
+                id="userInput"
+                class="request-input"
+                placeholder="Example: Create 3 clients with first name Gavin in the US with savings accounts"
+                aria-label="Onboarding request description"
+            ></textarea>
+
+            <div class="button-group">
+
+                <button
+                    id="generateButton"
+                    class="primary-button"
+                    type="button"
+                >
+                    Generate
+                </button>
+
+                <button
+                    id="clearButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+            <p
+                id="status"
+                class="status-text"
+            >
+                Ready
+            </p>
+
+        </section>
+
+
+        <!-- Output Card -->
+        <section class="panel">
+
+            <h2 class="panel__title">
+                Generated Output
+            </h2>
+
+            <pre
+                id="result"
+                class="output-box"
+                aria-label="Generated JSON output"
+            >Waiting for request...</pre>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
